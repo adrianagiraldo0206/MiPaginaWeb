@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carga de Datos API REST</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="index.js" defer type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Carga de Datos desde API REST</h1>
+            
+            <!-- Sección AJAX (Moderno) -->
+            <section class="section">
+                <h2>Método AJAX (Moderno)</h2>
+                <p>Usa XMLHttpRequest/Fetch para cargar datos sin recargar la página</p>
+                <button onclick="cargarDatosAjax()">Cargar Datos con AJAX</button>
+                <button onclick="cargarDatosFetch()">Cargar con Fetch API</button>
+                <div id="resultado-ajax" class="resultado"></div>
+            </section>
+            
+            <!-- Sección Formulario Antiguo -->
+            <section class="section">
+                <h2>Método Formulario Antiguo</h2>
+                <p>Recarga la página completa para enviar y recibir datos</p>
+                <form id="form-antiguo" method="GET" action="">
+                    <input type="hidden" name="accion" value="cargarDatos">
+                    <button type="submit">Cargar Datos con Formulario</button>
+                </form>
+                <div id="resultado-formulario" class="resultado"></div>
+            </section>
+            
+            <!-- Sección para mostrar datos -->
+            <section class="section">
+                <h2>Datos Cargados</h2>
+                <div id="datos-container"></div>
+            </section>
+        </div>
+    </body>
+</html>
